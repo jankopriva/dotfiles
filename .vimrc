@@ -70,3 +70,10 @@ endfunction
 nnoremap <silent> <leader>s :call <SID>StripTrailingWhitespaces()<cr>
 
 filetype plugin indent on
+
+" Open new file in the same directory as currently edited buffer
+nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+
+" Clone buffer to the same directory under different name
+nnoremap <Leader>w :w <C-R>=expand('%:p:h') . '/'<CR>
+

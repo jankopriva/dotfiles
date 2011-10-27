@@ -5,16 +5,16 @@ PATH=$PATH:/usr/local/git/bin:/Developer/usr/bin
 export PATH
 
 # man path
-MANPATH=$MANPATH:/Users/jk/.node_libraries/man:/usr/man:/usr/sfw/man:/opt/csw/man:/opt/onbld/man:/opt/SUNWspro/man:/opt/SUNWsamfs/man:$MANPATH
+MANPATH=$MANPATH:/Users/jk/.node_libraries/man:/usr/man
 
 # variables
-export MYMACH=/net/`ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}'`
 export EDITOR=vi
 export PAGER=less
 export TERM=xterm
 export LANG=C
 export HOST=midgard
 export NODE_PATH=/usr/local/lib/node
+export JSTESTDRIVER_HOME=~/bin
 
 # aliases
 alias -r ll="ls -al"  
@@ -59,24 +59,6 @@ SSH_ENV="$HOME/.ssh/environment"
 clone_bear() {
 	git clone -v git@git.gooddata.com:bear.git $1
 }
-#function start_agent {
-#    echo "Initialising new SSH agent..."
-#    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-#    echo succeeded
-#    chmod 600 "${SSH_ENV}"
-#    . "${SSH_ENV}" > /dev/null
-#    /usr/bin/ssh-add
-#}
 
-# Source SSH settings, if applicable
 
-#if [ -f "${SSH_ENV}" ]; then
-#    . "${SSH_ENV}" > /dev/null
-#    #ps ${SSH_AGENT_PID} doesn?t work under cywgin
-#    ps -a | grep ${SSH_AGENT_PID} | grep ssh-agent > /dev/null || {
-#        start_agent
-#    }
-#else
-#    start_agent
-#fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
