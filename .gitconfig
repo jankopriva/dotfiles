@@ -1,0 +1,30 @@
+[user]
+	name = Jan Kopriva
+	email = jan.kopriva@gooddata.com
+
+[merge]
+	tool = opendiff
+
+[alias]
+    co = checkout
+    br = branch
+    pr = pull --rebase
+    s = status
+    sp = stash pop
+    sa = save
+    sl = stash list
+    ss = "!f() { git stash show -p stash@{$1}; }; f"
+    sd = "!stashf() { git stash drop stash@{$1}; }; f"
+    l = log --pretty=format:'%Cred%h%Creset %Cgreen%s%Creset [%ar by %an]'
+    d = diff --color
+    pr = pull --rebase
+    conflicts = --all "!f() { git ls-files -u | cut -f 2 | sort -u; }; f"
+
+[push]
+    default = tracking # only push current branch
+
+[apply]
+    whitespace = nowarn
+
+[core]
+    pager = less -FXRS
