@@ -68,6 +68,7 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 
 nnoremap <silent> <leader>s :call <SID>StripTrailingWhitespaces()<cr>
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 filetype plugin indent on
 
