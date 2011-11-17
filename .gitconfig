@@ -8,6 +8,7 @@
 [alias]
     co = checkout
     br = branch
+    p = push
     pr = pull --rebase
     s = status
     sp = stash pop
@@ -18,7 +19,7 @@
     l = log --pretty=format:'%Cred%h%Creset %Cgreen%s%Creset [%ar by %an]'
     d = diff --color
     pr = pull --rebase
-    conflicts = --all "!f() { git ls-files -u | cut -f 2 | sort -u; }; f"
+    conflicts = "!f() { git ls-files -u | cut -f 2 | sort -u; }; f"
 
 [push]
     default = tracking # only push current branch

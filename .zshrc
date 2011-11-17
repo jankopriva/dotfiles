@@ -23,8 +23,6 @@ alias -r mysql="/usr/local/mysql/bin/mysql"
 alias -r ssh-jklab2="ssh root@jk-lab2.getgooddata.com"
 alias -r ssh-jkbugfix="ssh root@jk-bugfix.getgooddata.com"
 alias -r vi_apache_config="vi /private/etc/apache2/other/gdc.conf"
-alias -r git_push="git push origin HEAD"
-alias -r git_pull="git pull --rebase"
 
 # completions
 local _myhosts
