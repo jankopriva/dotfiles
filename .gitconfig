@@ -6,14 +6,17 @@
 	tool = opendiff
 
 [alias]
+    c = commit
     co = checkout
     br = branch
     p = push
     pr = pull --rebase
     s = status
+    st = stash
     sp = stash pop
-    sa = save
+    sa = stash save
     sl = stash list
+    i = "!f() { git pr && git p; }; f"
     ss = "!f() { git stash show -p stash@{$1}; }; f"
     sd = "!stashf() { git stash drop stash@{$1}; }; f"
     l = log --pretty=format:'%Cred%h%Creset %Cgreen%s%Creset [%ar by %an]'
