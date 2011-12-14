@@ -14,7 +14,7 @@
     s = status
     st = stash
     sp = stash pop
-    sa = stash save
+    ss = stash save
     sl = stash list
     i = "!f() { git pr && git p; }; f"
     ss = "!f() { git stash show -p stash@{$1}; }; f"
