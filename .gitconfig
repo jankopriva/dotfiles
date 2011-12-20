@@ -17,7 +17,7 @@
     ss = stash save
     sl = stash list
     i = "!f() { git pr && git p; }; f"
-    ss = "!f() { git stash show -p stash@{$1}; }; f"
+    sh = "!f() { git stash show -p stash@{$1}; }; f"
     sd = "!stashf() { git stash drop stash@{$1}; }; f"
     l = log --pretty=format:'%Cred%h%Creset %Cgreen%s%Creset [%ar by %an]'
     d = diff --color

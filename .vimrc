@@ -78,3 +78,12 @@ nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 " Clone buffer to the same directory under different name
 nnoremap <Leader>w :w <C-R>=expand('%:p:h') . '/'<CR>
 
+vmap <silent> <Leader>gt :call Quote("_(", ")")<CR>
+
+function! Quote(quote_s, quote_e)
+  let save = @"
+  silent normal gvy
+  let @" = a:quote_s . @" . a:quote_e
+  silent normal gvp
+  let @" = save
+endfunction
