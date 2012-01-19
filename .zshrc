@@ -1,7 +1,7 @@
 set -o emacs
 # path
 PATH=~/bin:/bin:/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/local/bin
-PATH=$PATH:/usr/local/git/bin:/Developer/usr/bin
+PATH=$PATH:/Developer/usr/bin
 export PATH
 
 # man path
@@ -10,11 +10,11 @@ MANPATH=$MANPATH:/Users/jk/.node_libraries/man:/usr/man
 # variables
 export EDITOR=vi
 export PAGER=less
-export TERM=xterm
 export LANG=C
 export HOST=midgard
-export NODE_PATH=/usr/local/lib/node
+export NODE_PATH=/usr/local/lib/node:/usr/local/lib/jsctags
 export JSTESTDRIVER_HOME=~/bin
+export TERM=xterm-256color
 
 # aliases
 alias -r ll="ls -al"
@@ -24,6 +24,7 @@ alias -r ssh-jklab2="ssh root@jk-lab2.getgooddata.com"
 alias -r ssh-jkbugfix="ssh root@jk-bugfix.getgooddata.com"
 alias -r ssh-text="ssh -A textextextcz@server7.railshosting.cz"
 alias -r vi_apache_config="vi /private/etc/apache2/other/gdc.conf"
+alias -r rgs="rake generate_script_tags"
 
 # completions
 local _myhosts
