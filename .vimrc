@@ -29,9 +29,10 @@ set ofu=syntaxcomplete#Complete
 
 set wildmode=list:longest
 
-"set nofoldenable
+set nofoldenable
 
-set foldmethod=manual
+"set foldmethod=marker
+"set foldmarker=package,endpackage
 
 " Save folds on close and reload on open
 "au BufWinLeave * mkview
@@ -56,9 +57,10 @@ nmap <space> :
 
 if has("autocmd")
 	autocmd bufwritepost .vimrc source $MYVIMRC
+    autocmd bufwritepost /private/etc/apache2/other/gdc.conf !sudo apachectl restart
 endif
 
-imap ,e <esc>
+imap jj <esc>
 nmap ,nt :NERDTreeToggle<cr>
 
 function! <SID>StripTrailingWhitespaces()

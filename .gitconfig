@@ -32,3 +32,4 @@
 
 [core]
     pager = less -FXRS
+	editor = /usr/bin/vim

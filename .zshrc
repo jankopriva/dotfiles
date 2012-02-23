@@ -20,16 +20,17 @@ export TERM=xterm-256color
 alias -r ll="ls -al"
 alias -r rspec="bundle exec rspec"
 alias -r mysql="/usr/local/mysql/bin/mysql"
-alias -r ssh-jklab2="ssh root@jk-lab2.getgooddata.com"
+alias -r ssh-jklab="ssh root@jklab.getgooddata.com"
 alias -r ssh-jkbugfix="ssh root@jk-bugfix.getgooddata.com"
 alias -r ssh-text="ssh -A textextextcz@server7.railshosting.cz"
 alias -r vi_apache_config="vi /private/etc/apache2/other/gdc.conf"
 alias -r rgs="rake generate_script_tags"
+alias -r sar="sudo apachectl restart"
 
 # completions
-local _myhosts
-_myhosts=( ${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*} )
-zstyle ':completion:*' hosts $_myhosts
+#local _myhosts
+#myhosts=( ${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*} )
+#style ':completion:*' hosts $_myhosts
 
 # autoloads
 autoload zmv
@@ -59,6 +60,5 @@ SSH_ENV="$HOME/.ssh/environment"
 clone_bear() {
 	git clone -v git@git.gooddata.com:bear.git $1
 }
-
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
