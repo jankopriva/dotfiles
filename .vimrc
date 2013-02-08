@@ -15,7 +15,7 @@ set expandtab
 nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+":set listchars=tab:▸\ ,eol:¬
 
 set number
 set ruler
